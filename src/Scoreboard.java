@@ -1,12 +1,12 @@
-public class ScoreBoard {
-    private String team1;
-    private String team2;
+public class Scoreboard {
+    private final String team1;
+    private final String team2;
     private int score1 = 0;
     private int score2 = 0;
     private String currentTeam;
     private boolean playing1 = true;
     private boolean playing2 = false;
-    public ScoreBoard(String team1, String team2){
+    public Scoreboard(String team1, String team2){
         this.team1 = team1;
         this.team2 = team2;
         currentTeam = team1;
@@ -20,10 +20,12 @@ public class ScoreBoard {
         else {
             if (playing1) {
                 playing1 = false;
-                playing2 = true
+                playing2 = true;
+                currentTeam = team2;
             } else{
                 playing2 = false;
                 playing1 = true;
+                currentTeam = team1;
             }
         }
     }

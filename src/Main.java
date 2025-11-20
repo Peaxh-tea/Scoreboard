@@ -4,24 +4,37 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String [] args) throws FileNotFoundException {
-        System.out.println(read());
+        String info;
+        Scoreboard game = new Scoreboard("Red", "Blue");
+        System.out.println(info = game.getScore());
+        game.recordPlay(1);
+        System.out.println(info = game.getScore());
+        game.recordPlay(0);
+        System.out.println(info = game.getScore());
+        System.out.println(info = game.getScore());
+        game.recordPlay(3);
+        System.out.println(info = game.getScore());
+        game.recordPlay(1);
+        game.recordPlay(0);
+        System.out.println(info = game.getScore());
+        game.recordPlay(0);
+        game.recordPlay(4);
+        game.recordPlay(0);
+        System.out.println(info = game.getScore());
+        Scoreboard match = new Scoreboard("Lions", "Tigers");
+        System.out.println(info = match.getScore());
+        System.out.println(info = game.getScore());
+        //System.out.println(read());
     }
 
 
     public static String read() throws FileNotFoundException {
         File f = new File("Scoreboard.txt");
         Scanner s = new Scanner(f);
-        String[] teams = new String[7[2]];
+        String[] teams = new String[7];
         while (s.hasNextLine()){
-            String team1 = s.next();
-            int points1 = 0;
-            String team2 = s.next();
-            int points2 = 0;
-            for (int i = 0; i < teams.length; i++){
-                if (team1.equals(teams[i])) points1 += teams[i[1]];
-            }
-            for (s.next().equals(int) == true) {
-            if (s.next() == 0)
+            Scoreboard scoring = new Scoreboard(s.next(), s.next());
         }
+        return null;
     }
 }
