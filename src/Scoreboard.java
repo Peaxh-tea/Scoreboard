@@ -29,4 +29,13 @@ public class Scoreboard {
             }
         }
     }
+    public String winningTeam(){
+        if (score1 > score2){
+            return team1;
+        }else if (score2 > score1){
+            return team2;
+        } else{
+            return null;
+        }
+    }
 }

@@ -33,7 +33,13 @@ public class Main {
         Scanner s = new Scanner(f);
         String[] teams = new String[7];
         while (s.hasNextLine()){
-            Scoreboard scoring = new Scoreboard(s.next(), s.next());
+            String team1 = s.next();
+            String team2 = s.next();
+            Scoreboard scoring = new Scoreboard(team1, team2);
+            while (s.next() == int) scoring.recordPlay(s.nextInt());
+            if (scoring.winningTeam()!= null){
+                if (scoring.winningTeam() == team1) teams[]
+            }
         }
         return null;
     }
