@@ -33,12 +33,16 @@ public class Main {
         Scanner s = new Scanner(f);
         String[] teams = new String[7];
         while (s.hasNextLine()){
-            String team1 = s.next();
-            String team2 = s.next();
-            Scoreboard scoring = new Scoreboard(team1, team2);
+            Team team1 = new Team(s.next());
+            Team team2 = new Team(s.next());
+            for (int i = 0; i < 7; i++) {
+                if (team1 == teams[i]) team1.setWins(teams[i].getWins());
+                if (team2 == teams[i]) team2.setWins(teams[i].getWins());
+            }
+            Scoreboard scoring = new Scoreboard(team1.getTeamName(), team2.getTeamName());
             while (s.next() == int) scoring.recordPlay(s.nextInt());
             if (scoring.winningTeam()!= null){
-                if (scoring.winningTeam() == team1) teams[]
+                if (scoring.winningTeam() == team1) team1.win();
             }
         }
         return null;
