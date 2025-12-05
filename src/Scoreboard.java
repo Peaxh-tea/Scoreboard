@@ -35,7 +35,7 @@ public class Scoreboard {
         }else if (score2 > score1){
             return team2;
         } else{
-            return null;
+            return "DRAW";
         }
     }
 }
